@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+</head>
+<title>SlideShow</title>
+<style>
+.button
+{
+ background-color:gray;
+  border: none;
+  color: white;
+  padding: 10px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 5px 22px;
+  cursor: pointer; 
+}
+.mySlides
+{
+    display: none;
+    background-color: lightgrey;
+  width: 1050px;
+  height: 900px;
+  border: 25px solid lightblue;
+  padding: 25px;
+  margin: 42px;
+}
+h1{
+    color : red;
+}
+    
+.second
+{
+    color: blue;
+}
+body
+{
+    background : lightgoldenrodyellow;
+}
+h2{
+    color: yellowgreen
+}
+</style>
+
+
+
+<body>
+    <center><h1>LAB 3 - SLIDESHOW </h1>  </center>
+    <hr>
+    
+    <button class = "button" onclick="buttonclick(-1)">❮ Prev</button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <button class = "button" onclick="buttonclick(1)">Next></button>
+    <div class="w3-content w3-display-container">
+
+        <div class="w3-display-container mySlides">
+                <div class="w3-display-top w3-large w3-container w3-padding-16 w3-red">
+                       <h2>First</h2> 
+                      </div>
+          <img src="1098a01182d2e2a102a583af23624da0b26ec487.jpg" width="980px" height="700px" >
+          
+        </div>
+
+        <div class="w3-display-container mySlides">
+                <div class="w3-display-bottomright w3-large w3-container w3-padding-16 w3-black">
+                      <h2> Second
+                        </h2>                    
+                      </div>
+            <img src="Chicago.jpg" width="980px" height="700px">
+           
+          </div>
+
+          <div class="w3-display-container mySlides">
+                <div class="w3-display-bottomright w3-large w3-container w3-padding-16 w3-black">
+                      <h2> Third</h2> 
+                    </div>
+            <img src="CHICAGO-RIVER-FACEBOOK.jpg" width="980px" height="700px">
+           
+          </div>
+
+          <div class="w3-display-container mySlides">
+                <div class="w3-display-bottomright w3-large w3-container w3-padding-16 w3-black">
+                      <h2> Fourth   
+                        </h2>                      
+                       </div>
+                       <iframe src = "https://ecs.syr.edu/faculty/fawcett/handouts/webpages/fawcettHome.htm" width="980px" height="700px"></iframe>  
+           
+          </div>
+        
+        
+          
+</div>
+
+    <script>
+            var Index = 1;
+            showslides(Index);
+            
+            function buttonclick(n) {
+              showslides(Index += n);
+            }
+            
+            function currentDiv(n) {
+              show(Index = n);
+            }
+            
+            function showslides(n) {
+              var i;
+              var x = document.getElementsByClassName("mySlides");
+              
+              if (n > x.length) {Index = 1}    
+              if (n < 1) {Index = x.length}
+              for (i = 0; i < x.length; i++) {
+                x[i].style.display = "none";  
+              }
+                           x[Index-1].style.display = "block";  
+              
+            }
+            </script>
+            
+
+    
+</body>
+    </head>
+</html>
